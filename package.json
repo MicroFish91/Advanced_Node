@@ -1,0 +1,11 @@
+{
+  "name": "advanced_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "threads.js",
+  "scripts": {
+    "threads": "set UV_THREADPOOL_SIZE=5 & node threads.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
