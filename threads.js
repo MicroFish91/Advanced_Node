@@ -13,6 +13,12 @@ const start = Date.now();
 
 // libuv on C++ side has access to a Thread Pool of 4 threads
 
+// Different in-built node modules will make use of the thread pool some of
+// which are dependent upon OS
+// All 'fs' modules make use of the thread pools
+
+// Tasks running in the thread pool are the 'pendingOperations' in event loop example
+
 crypto.pbkdf2("a", "b", 100000, 512, "sha512", () => {
   console.log("1:", Date.now() - start);
 });
